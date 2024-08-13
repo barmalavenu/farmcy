@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Farmcy</title>
+    <link rel="stylesheet" type="text/css" href="images/mystyle.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            
+              <h1>Farmcy</h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="#home">Dropdown 1</a></li>
+                            <li><a href="#about">Dropdown 2</a></li>
+                            <li><a href="#form">Dropdown 3</a></li>
+                            <li><a href="#gallery">Dropdown 4</a></li>
+                            <li><a href="#contact">Dropdown 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#form">Test</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <div id="home" class="content-section">
+        <div class="container">
+            <h2 >Home</h2>
+            <div class="outer-border">
+                <div class="left">
+                    <h3>Farmers are central figures in the cultivation of crops, a key element of agriculture that ensures the production of essential food and plant-based resources. Their primary role involves managing the entire lifecycle of crops, from planting and nurturing to harvesting and preparing them for market.In today’s world, protecting agricultural crops and ensuring community safety from industrial emissions are crucial. Farmers and residents near factories face unique challenges due to emissions that can impact air and soil quality. Understanding these risks is vital for safeguarding both health and productivity.<br><br></h3>
+                </div>
+                <div class="right">
+                    <img src="images/homepic" width="650" height="280" alt="Farming Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="content-section">
+        <div class="container">
+            <h2>About</h2>
+	
+            Agriculture is a vital sector supporting many livelihoods globally. With the rise in industrial development, factories are increasingly being set up near agricultural lands, often without considering their potential impact. It is crucial for landowners and farmers to understand how nearby industrial activities—especially pollutants emitted from factory chimneys—might affect their crops. By utilizing modern technology, they can assess whether these industrial activities are causing harm. This technology is valuable not only for farmers but also for anyone concerned with monitoring and managing environmental pollution in industrial areas.<br>Agriculture and community health are deeply intertwined with environmental factors, especially around industrial sites. Farmers need to ensure that their crops are not adversely affected by emissions, while local residents require safety from potential pollution.<br><br>
+<h3>Check the crop safety</h3><br>
+
+It offers a specialized service designed to evaluate the safety of areas surrounding industrial sites. By analyzing factors such as chimney height, factory distance, wind direction, and wind speed, it provide critical insights into whether emissions are affecting crops and nearby communities.<br><br>
+<h3>How It Works</h3><br>
+
+Input Data: Enter parameters like chimney height, factory location, wind direction, and wind speed.<br>
+Receive Results: Obtain a safety assessment to determine if emissions are posing a risk.
+            
+        </div>
+    </div>
+
+    <!-- Test Form Section -->
+    <div id="form" class="form-section">
+        <div class="container">
+            <h2 >Test</h2>
+            <hr class="new1">
+            <div class="outer-border">
+                <div class="left">
+
+                <h3 align="center">Enter the required details below to assess the safety of the crop from factories.</h3>
+               <form name="frm">
+                    <div class="form-group">
+                        <label for="cheight" id="t">Chimney Height:</label>
+                        <input type="text" id="cheight" name="cheight" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dist" id="t">Distance:</label>
+                        <input type="text" id="dist" name="dist" />
+                    </div>
+                    <div class="form-group">
+                        <label for="wspeed" id="t">Wind Speed:</label>
+                        <input type="text" id="wspeed" name="wspeed" />
+                    </div>
+                    <div class="form-group">
+                        <label for="wdirection" id="t">Wind Direction:</label>
+                        <input type="text" id="wdirection" name="wdirection" />
+                    </div>
+                    <button type="button" onClick="fetch()">Fetch</button>
+                    <p id="t">Result: <input type="text" name="word" /></p>
+                </form>
+            </div>
+	    <div class="right">
+                    		<img src="images\gall3.jpg" alt="Gallery Image" height="350" width="450" >
+                	</div>
+
+        </div>
+    </div>
+	</div>
+    <!-- Gallery Section -->
+    <div id="gallery" class="content-section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="outer-border">
+                
+			
+                    		<img src="images/gall1.jpeg" alt="Gallery Image" height="250" width="288">
+                	
+                    		<img src="images/gall2.jpg" alt="Gallery Image" height="250" width="288">
+			
+                	
+                 		<img src="images/gall4.jpg" alt="Gallery Image" height="250" width="250">
+			         
+                                  <img src="images/gall5.jpeg" alt="Gallery Image" height="250" width="250">
+			
+             
+                 
+		
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="content-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <h3>E-mail: barmalavenu@gmail.com</h3>
+            <h3>Phone No: +91 7288027567</h3>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            dropdown.addEventListener('mouseover', () => {
+                dropdown.querySelector('ul').style.display = 'block';
+            });
+            dropdown.addEventListener('mouseout', () => {
+                dropdown.querySelector('ul').style.display = 'none';
+            });
+        });
+
+        document.querySelectorAll('.mobile-nav-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                document.querySelector('#navbar ul').classList.toggle('mobile-active');
+                document.querySelector('.mobile-nav-show').classList.toggle('d-none');
+                document.querySelector('.mobile-nav-hide').classList.toggle('d-none');
+            });
+        });
+
+        function fetch() {
+    const form = document.forms["frm"];
+    const chimneyHeight = parseFloat(form.cheight.value) || 0; 
+    const distance = parseFloat(form.dist.value) || 0; 
+    const windSpeed = parseFloat(form.wspeed.value) || 1; 
+    const windDirection = parseFloat(form.wdirection.value) || 0; 
+
+    // Convert wind direction to radians
+    const windDirectionRadians = windDirection * (Math.PI / 180);
+
+    // Calculate the effective height of the chimney (taking plume rise into account)
+    const plumeRise = (chimneyHeight / windSpeed) * Math.pow(distance, 1/3); 
+    const effectiveHeight = chimneyHeight + plumeRise;
+
+    // Calculate the downwind concentration 
+    const horizontalDistance = distance * Math.cos(windDirectionRadians);
+    const downwindConcentration = effectiveHeight / (windSpeed * Math.sqrt(horizontalDistance));
+
+    // Define a threshold for safety 
+    const safetyThreshold = 1; // this threshold needs to be defined based on environmental standards
+
+    form.word.value = (downwindConcentration <= safetyThreshold) ? "Safe" : "Not Safe";
+}
+
+    </script>
+</body>
+</html>
